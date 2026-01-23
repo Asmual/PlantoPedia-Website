@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 /* Header container */
 .site_header {
     display: flex;
@@ -87,7 +89,6 @@
     text-decoration: none;
     color: #2e7d32;
     font-weight: 600;
-    font-family: cursive;
     padding-bottom: 6px;
     transition: color 0.3s;
 }
@@ -126,6 +127,12 @@
     transform: translateY(-8px) rotate(-45deg);
 }
 
+
+
+
+
+
+
 /* Responsive */
 @media screen and (max-width: 576px) {
     .header_portfolio .portfolio_img {
@@ -153,7 +160,7 @@
     }
 
     .search_btn {
-        padding: 9px 8px;
+        padding: 10px 6px;
         
     }
 
