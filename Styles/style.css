@@ -20,6 +20,7 @@ body{
 .header_left .logo {
     height: 40px;
     width: auto;
+    cursor: pointer;
 }
 
 /* Search bar */
@@ -89,13 +90,17 @@ body{
     text-decoration: none;
     color: #2e7d32;
     font-weight: 600;
+    text-align: center;
     padding-bottom: 6px;
     transition: color 0.3s;
+    border: 1px solid rgb(0 128 0 / 38%);
+    padding: 4px 13px;
+    border-radius: 15px;
+    
 }
 
 .header_menu ul li a:hover {
-    color: #66bb6a;
-    border-bottom: 1.5px solid #80808054;
+    border: 1.5px solid rgb(18, 230, 18);
 }
 
 /* Portfolio Circle */
@@ -128,7 +133,56 @@ body{
 }
 
 
+/* Flowers Page */
+.flower_section{
+  background-color: #25a4292e;
+ 
+}
+.flowers_card{
+  text-align: center;
+  color: #268026;
+  margin-bottom:20px;
+  border: 1.5px solid #25a429;
+  padding: 10px;
 
+}
+.flower_container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 15px;
+
+}
+
+.flower_card{
+  background-color: #a3a1a1;
+  border-radius: 15px;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 10px 10px;
+  
+}
+.flower_card img{
+  width: 260px;
+  height: 280px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.flower_card h3{
+  text-align: center;
+
+}.flower_card p{
+  padding: 6px 0;
+  text-align: justify;
+
+}
+
+.readMore_button{
+   border: 1px solid black;
+   padding: 6px;
+   border-radius: 6px;
+
+}
 
 
 
@@ -200,6 +254,7 @@ body{
         border-radius: 12px;
         background: #2e7d32;
         color: #fff;
+        text-align: center;
         font-weight: 600;
         transition: background 0.3s;
     }
@@ -207,6 +262,7 @@ body{
     .header_menu ul li a:hover {
         background: #25a429;
         border-bottom: none;
+        color: #ffffff;
     }
 
     /* Hamburger */
