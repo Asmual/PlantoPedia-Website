@@ -14,6 +14,9 @@ body{
     padding: 10px 20px;
     background-color: #fff8ec;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 /* Logo */
@@ -140,37 +143,33 @@ body{
 
 }
 .hero_container{
-    max-width: 100%;
-    margin: 0 auto;
-    height: 87vh;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* horizontal center */
+    align-items: center;     /* vertical center */
     background-color: rgba(12, 32, 52, 0.478);
-
 }
 
 .hero_container h1 {
-    top: 50%;
-    left: 30%;
-    position: absolute;
     font-size: 52px;
-    color: rgb(255 255 255);
-    border: 2px solid #ffffff;
-    padding: 10px;
-    text-align: center;
-    font-weight: 900;
-    box-shadow: #25a4292e;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    font-weight: 700;
     background-color: #26802656;
+    text-align: center;
 }
-
-
 
 /* Flowers Page */
 .flower_container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
   max-width: 1200px;
   margin: 0 auto;
   gap: 20px;
   padding: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 .flower_section h1{
     text-align: center;
@@ -243,6 +242,11 @@ body{
     .header_portfolio .portfolio_img {
         display: none;
     }
+    .site_header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
 
     .header_left .logo {
         height: 40px;
@@ -324,6 +328,18 @@ body{
         margin-left: 25px;
     }
 
+/* Hero Section */
+
+    .hero_container {
+        height: 90vh; /* mobile browser safe */
+    }
+
+    .hero_container h1 {
+        font-size: 28px;
+        padding: 10px 14px;
+        line-height: 1.3;
+    }
+    
     /* Flowerd */
 
   .flower_container{
