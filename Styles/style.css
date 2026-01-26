@@ -7,7 +7,7 @@
     font-family: "Noto Sans", sans-serif;
 }
 
-/* Header container */
+/* Header Section */
 .site_header {
     display: flex;
     align-items: center;
@@ -26,6 +26,7 @@
     width: auto;
     cursor: pointer;
 }
+
 
 /* Search bar */
 .header_search {
@@ -78,7 +79,7 @@
     transition: all 0.3s ease-in-out;
 }
 
-/* Menu */
+/* Main Menu */
 .header_menu ul {
     display: flex;
     list-style: none;
@@ -104,7 +105,7 @@
 }
 
 .header_menu ul li a:hover {
-    border: 1.5px solid rgb(18, 230, 18);
+    border: 1.5px solid rgb(15, 209, 15);
 }
 
 /* Portfolio Circle */
@@ -123,7 +124,7 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* toggle active animation */
+/* toggle Cross & bar animation */
 .navbar_toggle.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
 }
@@ -141,14 +142,13 @@
     background-image: url(../images/Flowers/Bagan-Bilash.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 .hero_container{
     width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: center; /* horizontal center */
-    align-items: center;     /* vertical center */
+    justify-content: center;
+    align-items: center;
     background-color: rgba(12, 32, 52, 0.478);
 }
 
@@ -161,8 +161,27 @@
     background-color: #26802656;
     text-align: center;
 }
+.hero_container h1 #pedia_green{
+  color: #38b93b;
+}
 
-/* Flowers Page */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Flowers Page Flowers.html*/
 .flower_container {
   display: grid;
   /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
@@ -278,29 +297,47 @@
   color: #4caf50;
 }
 
-/* Social icons */
+/* Social icons style */
 .social_icons {
   display: flex;
+  flex-direction: row;
   gap: 15px;
   margin-top: 15px;
+  justify-content: flex-start;
 }
 
 .social_icons a {
   width: 45px;
   height: 45px;
-  background: #ffcc80;
+  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   text-decoration: none;
   font-size: 20px;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  border: 1px solid black;
+  color: #000000;
+  overflow: hidden;
+}
+
+.social_icons a i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 .social_icons a:hover {
-  background: #4caf50;
-  color: #fff;
+  background: green !important;
+  color: #ffffff !important;
+  border-color: green;
+}
+
+.social_icons a:hover i {
+  color: #ffffff !important;
 }
 
 /* Footer columns */
@@ -347,7 +384,10 @@
 /* Icons spacing */
 .footer_col i {
   color: #2e7d32;
-  margin-right: 8px;
+}
+.footer_col i:hover {
+  color: #ffffff;
+
 }
 
 /* Dark Mode Support */
@@ -381,7 +421,11 @@
 
 
 
-/* Responsive */
+
+
+
+
+/* Responsive Design */
 @media screen and (max-width: 576px) {
     .header_portfolio .portfolio_img {
         display: block;
@@ -475,7 +519,7 @@
 /* Hero Section */
 
     .hero_container {
-        height: 90vh; /* mobile browser safe */
+        height: 90vh;
     }
 
     .hero_container h1 {
@@ -484,8 +528,8 @@
         line-height: 1.3;
     }
 
-    /* Flowerd */
 
+    /* Flowers Page Style */
   .flower_container{
     grid-template-columns: repeat(1, 1fr);
     gap: 10px;
@@ -501,7 +545,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
+/* Small Device */
 @media (max-width: 480px) {
   .footer_container {
     grid-template-columns: 1fr;

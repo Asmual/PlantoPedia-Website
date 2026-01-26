@@ -11,7 +11,7 @@
 
 
 
-
+/* oggle Active and close */
 document.addEventListener('DOMContentLoaded', () => {
     const navbar_toggle = document.querySelector('.navbar_toggle');
     const header_menu = document.querySelector('.header_menu');
@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
         header_menu.classList.toggle('active');
     });
 });
-// 
+
+
 /* ===== Flower Search System ===== */
     const searchInput = document.querySelector('.search_input');
     const flowerCards = document.querySelectorAll('.flower_card');
@@ -37,7 +38,5 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 card.style.display = "none";
             }
-        
-
         });
     });
