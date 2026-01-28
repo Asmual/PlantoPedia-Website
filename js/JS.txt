@@ -1,37 +1,41 @@
 
-/* Toggle Active and close */
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded"), () => {
+
+    /* ===== Navbar Toggle ===== */
     const navbar_toggle = document.querySelector('.navbar_toggle');
     const header_menu = document.querySelector('.header_menu');
 
-    navbar_toggle.addEventListener('click', () => {
-        navbar_toggle.classList.toggle('active');
-        header_menu.classList.toggle('active');
-    });
-});
+    if (navbar_toggle && header_menu) {
+        navbar_toggle.addEventListener('click', () => {
+            navbar_toggle.classList.toggle('active');
+            header_menu.classList.toggle('active');
+        });
+    }
 
-
-/* ===== Flower Search System ===== */
+    /* ===== Flower Search (Page-wise) ===== */
     const searchInput = document.querySelector('.search_input');
     const flowerCards = document.querySelectorAll('.flower_card');
 
-    searchInput.addEventListener('keyup', () => {
-        const searchValue = searchInput.value.toLowerCase();
+    if (searchInput && flowerCards.length > 0) {
+        searchInput.addEventListener('keyup', () => {
+            const searchValue = searchInput.value.toLowerCase();
 
-        flowerCards.forEach(card => {
-            const flowerName = card.querySelector('h3').innerText.toLowerCase();
-
-            if (flowerName.includes(searchValue)) {
-                card.style.display = "flex";
-            } else {
-                card.style.display = "none";
-            }
+            flowerCards.forEach(card => {
+                const flowerName = card.querySelector('h3').innerText.toLowerCase();
+                card.style.display = flowerName.includes(searchValue) ? "flex" : "none";
+            });
         });
-    });
+    }
 
-
-
-/* ===== Welcome Popup Dialog with Sound ===== */
+    /* ===== Flower Count Button ===== */
+    const flowerBtn = document.querySelector(".flower_count_btn");
+    if (flowerBtn) {
+        flowerBtn.addEventListener("click", () => {
+            const flowerCount = document.querySelectorAll(".flower_card").length;
+            flowerBtn.innerText = `Flowers (${flowerCount})`;
+        });
+    }
+}   
 /* ===== Welcome Popup Dialog (One Time Only) ===== */
 const popupOverlay = document.getElementById("popupOverlay");
 const yesBtn = document.getElementById("yesBtn");
@@ -65,7 +69,7 @@ if (popupOverlay && yesBtn && noBtn && popupMessage && popupSound) {
       popupTitle.style.display = "block";
       popupButtons.style.display = "flex";
       localStorage.setItem("hasSeenPopup", "true"); // Save state
-    }, 2000);
+    }, 3000);
   });
 
   noBtn.addEventListener("click", () => {
@@ -81,6 +85,10 @@ if (popupOverlay && yesBtn && noBtn && popupMessage && popupSound) {
       popupTitle.style.display = "block";
       popupButtons.style.display = "flex";
       localStorage.setItem("hasSeenPopup", "true"); // Save state
-    }, 2000);
+    }, 3000);
   });
 }
+
+
+/* ===== Global Search Data ===== */
+        
