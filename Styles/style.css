@@ -152,6 +152,7 @@
 .Hero_bg_img {
   margin-left: 60px;
 }
+
 .Hero_bg_img img{
   max-height: 460px;
 }
@@ -162,7 +163,6 @@
   background: #21783725;
   border-radius: 15px 260px 15px 15px;
 }
-
 
 .hero_content h1 {
   font-size: 3.2rem;
@@ -243,9 +243,6 @@
      
 }
 
-
-
-
 .flower_container {
   display: grid;
   max-width: 1200px;
@@ -254,6 +251,7 @@
   padding: 20px;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
 }
+
 .flower_section h1{
     text-align: center;
     margin-top: 6px;
@@ -261,6 +259,7 @@
     padding: 8px;
     color: #09710c;
 }
+
 .flower_card {
   background-color: #e3f7e3; 
   border-radius: 15px;
@@ -319,6 +318,17 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 /* Footer bottom */
 .footer {
   background: #ffffff;
@@ -359,6 +369,7 @@
 .logo_box h2 span {
   color: #4caf50;
 }
+
 
 /* Social icons style */
 .social_icons {
@@ -445,6 +456,7 @@
 }
 
 /* Icons spacing */
+
 .footer_col i {
   color: #2e7d32;
 }
@@ -564,6 +576,11 @@
 
 
 
+
+
+
+
+
 /* Responsive Design */
 @media screen and (max-width: 576px) {
     .header_portfolio .portfolio_img {
@@ -610,7 +627,7 @@
         right: 0;
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
-        background: rgba(255, 248, 236, 0.95);
+        background: rgb(4 232 57 / 0%);
         box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
         backdrop-filter: blur(10px);
         transition: transform 0.3s ease;
@@ -700,7 +717,7 @@
 
 
 
-/* ===================== Responsive Hero Section ===================== */
+/* ========== Responsive Hero Section =========== */
 
 
 
