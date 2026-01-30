@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+}
+
+/* Header Section */
+.site_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff8ec;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.header_left .logo {
+    height: 40px;
+    width: auto;
+    cursor: pointer;
+}
+
+
+/* Search bar */
+.header_search {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.search_input {
+    width: 150px;
+    padding: 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    transition: width 0.3s;
+}
+
+.search_input:focus {
+    width: 200px;
+    border: 1px solid green;
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+.search_btn {
+    padding: 10px 10px;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 20px 20px 0;
+    background-color: #268026;
+    color: white;
+    cursor: pointer;
+}
+
+/* hamburger menu */
+.navbar_toggle {
+    display: none;
+    background: transparent;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #493f3f;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Main Menu */
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0 20px;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #2e7d32;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 6px;
+    transition: color 0.3s;
+    border: 1px solid rgb(0 128 0 / 38%);
+    padding: 4px 13px;
+    border-radius: 15px;
+    
+}
+
+.navbar ul li a:hover {
+    border: 1.5px solid rgb(7, 128, 7);
+}
+
+
+/* ===== Submenu ===== */
+/* submenu parent */
+
+/* সাব-মেনু কন্টেইনার */
+.submenu_container {
+    position: relative; /* এটি নিশ্চিত করে সাব-মেনু মেইন মেনুর সাপেক্ষে থাকবে */
+    display: inline-block; /* কন্টেইনার যতটুকু লেখা ততটুকু জায়গা নিবে */
+}
+
+/* সাব-মেনু বক্স */
+.submanu_bar {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: absolute;
+    top: calc(100% + 22px); 
+    left: 105%;
+    transform: translateX(-50%) translateY(10px); 
+    min-width: 190px;
+    list-style: none;
+    padding: 12px;
+    margin: 0;
+    border-radius: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+    
+}
+
+ 
+.submenu_container:hover .submanu_bar {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);  
+}
+
+ 
+.submenu_container::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 25px; 
+}
+
+ 
+.submanu_bar li a {
+    display: block;
+    text-decoration: none;
+    color: #2e7d32;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1.5px solid transparent; 
+    transition: all 0.2s ease;
+}
+
+.submanu_bar li a:hover {
+     
+    border-color: #4caf50;
+    padding-left: 20px;
+    background: #fff8ec;
+}
+
+
+
+/* Portfolio Circle */
+.header_portfolio .portfolio_img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid #4caf50;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.header_portfolio .portfolio_img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* toggle Cross & bar animation */
+.navbar_toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.navbar_toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar_toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+h1{
+  text-align: center;
+  background-color: rebeccapurple;
+  color: white;
+  margin-top: 200PX;
+}

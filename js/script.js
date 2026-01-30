@@ -2,11 +2,11 @@
 /* Toggle Active and close */
 document.addEventListener('DOMContentLoaded', () => {
     const navbar_toggle = document.querySelector('.navbar_toggle');
-    const header_menu = document.querySelector('.header_menu');
+    const navbar = document.querySelector('.navbar');
 
     navbar_toggle.addEventListener('click', () => {
         navbar_toggle.classList.toggle('active');
-        header_menu.classList.toggle('active');
+        navbar.classList.toggle('active');
     });
 });
 
@@ -84,3 +84,17 @@ if (popupOverlay && yesBtn && noBtn && popupMessage && popupSound) {
     }, 2000);
   });
 }
+// /*  */
+ 
+document.querySelectorAll('.arrow_btn').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+        e.stopPropagation(); // menu বন্ধ হয়ে যাওয়া আটকাতে
+
+        const container = this.closest('.submenu_container');
+        const submenu = container.querySelector('.submanu_bar');
+
+        submenu.classList.toggle('open');
+        container.classList.toggle('active');
+    });
+});
+ 

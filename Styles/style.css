@@ -12,8 +12,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #fff8ec;
+    min-height: 71px;
+    background-color: aliceblue;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
@@ -52,7 +52,7 @@
 }
 
 .search_btn {
-    padding: 9px 10px;
+    padding: 10px 10px;
     border: 1px solid #ccc;
     border-left: none;
     border-radius: 0 20px 20px 0;
@@ -79,34 +79,80 @@
     transition: all 0.3s ease-in-out;
 }
 
+
+
+
 /* Main Menu */
-.header_menu ul {
-    display: flex;
-    list-style: none;
-    margin: 0 20px;
-    padding: 0;
+.nav_container {
+  display: flex;
+  gap: 10px;
+
+}
+ .dropdown{
+  position: relative;
+}
+.nav_container li {
+  list-style: none;
+  position: relative;
 }
 
-.header_menu ul li {
-    margin: 0 10px;
-}
-
-.header_menu ul li a {
+.nav_container li a {
     text-decoration: none;
     color: #2e7d32;
     font-weight: 600;
     text-align: center;
-    padding-bottom: 6px;
-    transition: color 0.3s;
-    border: 1px solid rgb(0 128 0 / 38%);
     padding: 4px 13px;
     border-radius: 15px;
-    
+    transition: color 0.3s;
+    border: 1px solid transparent;
 }
 
-.header_menu ul li a:hover {
-    border: 1.5px solid rgb(15, 209, 15);
+.nav_container li a:hover {
+    border: 1px solid rgb(7, 128, 7);
 }
+
+.nav_container li a:not(.Plants):hover{
+  border-color: rgb(7, 128, 7);
+}
+
+
+/* SubMenu  */
+.submenu{
+  position: absolute;
+  top: 225%;
+  left: 0;
+  min-width: 175px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.1);
+  display: none;
+  text-align: center;
+  background-color: aliceblue;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+ 
+}
+.submenu li{
+  padding: 6px 11px;
+}
+
+.submenu li a:hover {
+  border: 1px solid rgb(7, 128, 7);
+}
+
+.dropdown:hover> .submenu {
+  display: block;
+}
+.submenu::before{
+  content: "";
+  position: absolute;
+  top: -24px;   
+  left: 0;
+  height: 24px;
+  width: 90%;
+}
+ 
+
 
 /* Portfolio Circle */
 .header_portfolio .portfolio_img {
@@ -160,7 +206,7 @@
 .hero_content {
   max-width: 600px;
   padding: 20px;
-  background: #21783725;
+  background-color: aliceblue;
   border-radius: 15px 260px 15px 15px;
 }
 
@@ -460,10 +506,7 @@
 .footer_col i {
   color: #2e7d32;
 }
-.footer_col i:hover {
-  color: #ffffff;
-
-}
+ 
 
 /* Dark Mode Support */
 .footer.dark {
@@ -597,6 +640,10 @@
         width: auto;
     }
 
+    /*  */
+
+    /*  */
+
     .header_search {
         display: flex;
         align-items: center;
@@ -617,12 +664,18 @@
         
     }
 
-    /* Header Part */
-    .header_menu {
+
+
+
+
+
+    /* Nav Section */
+
+    .navbar {
         align-items: flex-start;
         position: fixed;
         height: 100vh;
-        width: 220px;
+        width: 99%;
         top: 70px;
         right: 0;
         border-top-left-radius: 20px;
@@ -636,32 +689,38 @@
     }
 
     /* show when active */
-    .header_menu.active {
+    .navbar.active {
         transform: translateX(0);
     }
 
-    .header_menu ul {
+    .nav_container {
         display: flex;
         flex-direction: column;
         gap: 15px;
         padding: 20px;
+        align-items: flex-start; /* এটি বাটনগুলোকে বাম দিকে রাখবে */
     }
-
-    .header_menu ul li a {
-        display: block;
-        padding: 12px 16px;
-        border-radius: 12px;
-        background: #2e7d32;
-        color: #fff;
-        text-align: center;
-        font-weight: 600;
-        transition: background 0.3s;
-    }
-
-    .header_menu ul li a:hover {
-        background: #25a429;
+    .nav_container li {
+    width: 40%; /* বাটনগুলো এখন স্ক্রিনের ৪০% জায়গা নিবে */
+    list-style: none;
+}
+ .nav_container li a {
+    display: block;
+    width: 100%; /* li-এর ৪০% এর পুরোটা কাভার করবে */
+    padding: 12px 16px;
+    border-radius: 12px;
+    background: #2e7d32;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    box-sizing: border-box; /* প্যাডিং যেন উইডথ বাড়িয়ে না দেয় */
+    transition: background 0.3s;
+}
+    .nav_container li a:hover {
+      border: 1.5px solid rgb(2 129 2);
         border-bottom: none;
         color: #ffffff;
+        
     }
 
     /* Hamburger */
