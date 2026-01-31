@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flowers</title>
+  <title>Flowers Gallary</title>
   <link rel="stylesheet" href="../Styles/style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
@@ -43,8 +45,8 @@
         </li>
   
         <li><a href="../Pages/flowers.html">Flowers</a></li>
-        <li><a href="#">Aqua Fish</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="./aquaFish.html">Aqua Fish</a></li>
+        <li><a href="https://asmual.github.io/Asmual-Portfolio" target="_blank">Contact</a></li>
       </ul>
     </nav>
   
@@ -59,9 +61,7 @@
 <!-- Flowers Section -->
 
   <section class="flower_section">
-    <h1 class="flowers_Gh1">Flowers Gallary
-      <!-- <button class="flower_count_btn">Total Flowers</button> -->
-    </h1>
+    <h1 class="flowers_Gh1">Flowers Gallary</h1>
 
     <div class="flower_container">
 
@@ -153,11 +153,37 @@
   </section>
 
 
-  <!-- Image Preview Box -->
-  <div class="image_preview">
-    <img src="" alt="Full Preview">
+
+
+
+
+
+
+
+
+
+<!-- Image Preview Modal -->
+<div class="image-preview" aria-hidden="true">
+  <button class="nav-btn prev">❮</button>
+
+  <div class="preview-content">
+    <img src="" alt="Flower Full View">
+    <h3 class="preview-caption"></h3>
   </div>
 
+  <button class="nav-btn next">❯</button>
+</div>
+
+
+
+
+
+
+
+
+
   <script src="../js/script.js"></script>
+  <script src="../js/imagePreview.js"></script>
+
 </body>
 </html>

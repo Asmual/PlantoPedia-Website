@@ -101,19 +101,19 @@ document.querySelectorAll('.arrow_btn').forEach(btn => {
 //
 
 
-const flowerImages = document.querySelectorAll('.flower_card img');
-const previewBox = document.querySelector('.image_preview');
-const previewImg = previewBox.querySelector('img');
+// const flowerImages = document.querySelectorAll('.flower_card img');
+// const previewBox = document.querySelector('.image_preview');
+// const previewImg = previewBox.querySelector('img');
 
-// image click করলে open
-flowerImages.forEach(img => {
-  img.addEventListener('click', () => {
-    previewImg.src = img.src;
-    previewBox.classList.add('active');
-  });
-});
+// // image click to open
+// flowerImages.forEach(img => {
+//   img.addEventListener('click', () => {
+//     previewImg.src = img.src;
+//     previewBox.classList.add('active');
+//   });
+// });
 
-// preview তে click করলে close
-previewBox.addEventListener('click', () => {
-  previewBox.classList.remove('active');
-});
+// // preview click to close
+// previewBox.addEventListener('click', () => {
+//   previewBox.classList.remove('active');
+// });

@@ -18,6 +18,7 @@
     position: sticky;
     top: 0;
     z-index: 1000;
+    padding: 0px 10px;
 }
 
 /* Logo */
@@ -615,11 +616,11 @@
 
 
 
-/*  */
+/* Image Preview for JS*/
 
-.image_preview {
+/* .image_preview {
   position: fixed;
-  top: 0;
+  top: 30px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -634,8 +635,8 @@
 }
 
 .image_preview img {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 80%;
+  max-height: 80%;
   border-radius: 12px;
   cursor: pointer;
 }
@@ -643,10 +644,127 @@
 .image_preview.active {
   opacity: 1;
   pointer-events: auto;
+} */
+
+
+/* ===== Image Preview Modal ===== */
+.image-preview {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
 }
 
-/* A */
+.image-preview.active {
+  opacity: 1;
+  visibility: visible;
+}
 
+.image-preview img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 14px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  cursor: zoom-out;
+  animation: zoomIn 0.3s ease;
+}
+
+/* subtle animation */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* cursor hint */
+.flower_card img {
+  cursor: zoom-in;
+}
+
+/* Image Preview for JS End*/
+
+/* ===== Image Preview Gallery ===== */
+.image-preview {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+
+.image-preview.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.preview-content {
+  text-align: center;
+  max-width: 90%;
+}
+
+.preview-content img {
+  max-width: 90vw;
+  max-height: 75vh;
+  border-radius: 14px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+  animation: zoomIn 0.3s ease;
+}
+
+.preview-caption {
+  margin-top: 15px;
+  color: #fff;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+/* Nav buttons */
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+
+.nav-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Mobile friendly */
+@media (max-width: 576px) {
+  .nav-btn {
+    font-size: 2.2rem;
+  }
+}
+
+.flower_card img {
+  cursor: zoom-in;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
 
 
 
@@ -662,16 +780,16 @@
     position: sticky;
     top: 0;
     z-index: 1000;
+ 
   }
 
     .header_left .logo {
         height: 40px;
         width: auto;
+     
     }
 
-    /*  */
 
-    /*  */
 
     .header_search {
         display: flex;
@@ -727,22 +845,22 @@
         flex-direction: column;
         gap: 15px;
         padding: 20px;
-        align-items: flex-start; /* এটি বাটনগুলোকে বাম দিকে রাখবে */
+        align-items: flex-start; 
     }
     .nav_container li {
-    width: 40%; /* বাটনগুলো এখন স্ক্রিনের ৪০% জায়গা নিবে */
+    width: 40%; 
     list-style: none;
 }
  .nav_container li a {
     display: block;
-    width: 100%; /* li-এর ৪০% এর পুরোটা কাভার করবে */
+    width: 100%;  
     padding: 12px 16px;
     border-radius: 12px;
     background: #2e7d32;
     color: #fff;
     text-align: center;
     font-weight: 600;
-    box-sizing: border-box; /* প্যাডিং যেন উইডথ বাড়িয়ে না দেয় */
+    box-sizing: border-box; 
     transition: background 0.3s;
 }
     .nav_container li a:hover {
@@ -789,6 +907,22 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Small Device */
 @media (max-width: 480px) {
   .footer_container {
