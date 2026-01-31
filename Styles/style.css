@@ -750,6 +750,64 @@
   transform: scale(1.1);
 }
 
+
+
+/* Details Content *//* Details Content */
+
+
+.details-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px;
+  line-height: 1.7;
+}
+
+.details-container h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.details-container h2 {
+  margin-top: 35px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.details-container ul {
+  padding-left: 20px;
+}
+
+.details-container li {
+  margin-bottom: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Mobile friendly */
 @media (max-width: 576px) {
   .nav-btn {
@@ -765,6 +823,21 @@
   from { transform: scale(0.85); opacity: 0; }
   to   { transform: scale(1); opacity: 1; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

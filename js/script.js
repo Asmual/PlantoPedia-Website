@@ -88,7 +88,7 @@ if (popupOverlay && yesBtn && noBtn && popupMessage && popupSound) {
  
 document.querySelectorAll('.arrow_btn').forEach(btn => {
     btn.addEventListener('click', function (e) {
-        e.stopPropagation(); // menu বন্ধ হয়ে যাওয়া আটকাতে
+        e.stopPropagation(); 
 
         const container = this.closest('.submenu_container');
         const submenu = container.querySelector('.submanu_bar');
@@ -98,22 +98,11 @@ document.querySelectorAll('.arrow_btn').forEach(btn => {
     });
 });
  
-//
+// ==================================
 
-
-// const flowerImages = document.querySelectorAll('.flower_card img');
-// const previewBox = document.querySelector('.image_preview');
-// const previewImg = previewBox.querySelector('img');
-
-// // image click to open
-// flowerImages.forEach(img => {
-//   img.addEventListener('click', () => {
-//     previewImg.src = img.src;
-//     previewBox.classList.add('active');
-//   });
-// });
-
-// // preview click to close
-// previewBox.addEventListener('click', () => {
-//   previewBox.classList.remove('active');
-// });
+document.querySelectorAll(".readMore_button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const id = btn.dataset.id;
+    window.location.href = `fish-details.html?id=${id}`;
+  });
+});
