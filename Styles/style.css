@@ -119,22 +119,13 @@
 
 /* SubMenu  */
 .submenu{
-  position: absolute;
-  top: 225%;
-  left: 0;
-  min-width: 175px;
-  box-shadow: 0 5px 15px rgba(0,0,0,.1);
   display: none;
-  text-align: center;
-  background-color: aliceblue;
-  text-align: center;
-  padding-bottom: 10px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  
  
 }
 .submenu li{
   padding: 6px 11px;
+  
 }
 
 .submenu li a:hover {
@@ -143,15 +134,17 @@
 
 .dropdown:hover> .submenu {
   display: block;
+  
+
 }
-.submenu::before{
+/* .submenu::before{
   content: "";
   position: absolute;
   top: -24px;   
   left: 0;
   height: 24px;
   width: 90%;
-}
+} */
  
 
 
@@ -257,10 +250,6 @@
 .btn.secondary:hover {
   text-decoration: underline;
 }
-
-
-
-
 
 
 
@@ -616,37 +605,6 @@
 
 
 
-/* Image Preview for JS*/
-
-/* .image_preview {
-  position: fixed;
-  top: 30px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.3s ease;
-  z-index: 999;
-}
-
-.image_preview img {
-  max-width: 80%;
-  max-height: 80%;
-  border-radius: 12px;
-  cursor: pointer;
-}
-
-.image_preview.active {
-  opacity: 1;
-  pointer-events: auto;
-} */
-
-
 /* ===== Image Preview Modal ===== */
 .image-preview {
   position: fixed;
@@ -808,46 +766,16 @@
 
 
 
-/* Mobile friendly */
-@media (max-width: 576px) {
-  .nav-btn {
-    font-size: 2.2rem;
-  }
-}
-
-.flower_card img {
-  cursor: zoom-in;
-}
-
-@keyframes zoomIn {
-  from { transform: scale(0.85); opacity: 0; }
-  to   { transform: scale(1); opacity: 1; }
-}
 
 
 
+/* Responsive Design Main Section */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Responsive Design */
 @media screen and (max-width: 576px) {
     .header_portfolio .portfolio_img {
         display: none;
     }
+
     .site_header {
     position: sticky;
     top: 0;
@@ -856,12 +784,9 @@
   }
 
     .header_left .logo {
-        height: 40px;
-        width: auto;
-     
+      height: 40px;
+      width: auto;
     }
-
-
 
     .header_search {
         display: flex;
@@ -885,26 +810,23 @@
 
 
 
-
-
-
     /* Nav Section */
 
     .navbar {
-        align-items: flex-start;
-        position: fixed;
-        height: 100vh;
-        width: 99%;
-        top: 70px;
-        right: 0;
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
-        background: rgb(4 232 57 / 0%);
-        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(10px);
-        transition: transform 0.3s ease;
-        z-index: 998;
-        transform: translateX(100%);
+      align-items: flex-start;
+      position: fixed;
+      height: 100vh;
+      width: 99%;
+      top: 70px;
+      right: 0;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      background: rgb(4 232 57 / 0%);
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease;
+      z-index: 998;
+      transform: translateX(100%);
     }
 
     /* show when active */
@@ -917,7 +839,8 @@
         flex-direction: column;
         gap: 15px;
         padding: 20px;
-        align-items: flex-start; 
+        align-items: flex-end; 
+        margin-right: 25px;
     }
     .nav_container li {
     width: 40%; 
@@ -928,7 +851,7 @@
     width: 100%;  
     padding: 12px 16px;
     border-radius: 12px;
-    background: #2e7d32;
+    background-color: rgb(3, 90, 3);
     color: #fff;
     text-align: center;
     font-weight: 600;
@@ -937,8 +860,8 @@
 }
     .nav_container li a:hover {
       border: 1.5px solid rgb(2 129 2);
-        border-bottom: none;
-        color: #ffffff;
+      border-bottom: none;
+      color: #ffffff;
         
     }
 
@@ -950,73 +873,29 @@
         margin-left: 25px;
     }
 
-/* Hero Section */
 
-    .hero_container {
-        height: 90vh;
-    }
-
-    .hero_container h1 {
-        font-size: 28px;
-        padding: 10px 14px;
-        line-height: 1.3;
-    }
-
-
-    /* Flowers Page Style */
-  .flower_container{
-    grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
-    margin: 15px;
+    /* SubMenu */
+  .submenu{
+    position: absolute;
+    top: 0%;
+    right: 128px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    text-align: center;
+    background-color: rgba(240, 248, 255, 0.113);
+    text-align: center;
+    padding-bottom: 10px; 
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    
+  }
+  .submenu li a{
+    background-color: rgb(3, 90, 3);
+    width: 160px;
   }
 
-  .flower_card img{
-    width: 100%;
-  }
-
-  /* Footer */
-   .footer_container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+/* === Responsive Hero Section === */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Small Device */
-@media (max-width: 480px) {
-  .footer_container {
-    grid-template-columns: 1fr;
-  }
-
-  .social_icons {
-    justify-content: flex-start;
-  }
-
-
-}
- 
-
-
-
-/* ========== Responsive Hero Section =========== */
-
-
-
-/* Small Mobile (max-width: 576px) */
-@media (max-width: 576px) {
   .hero {
     padding: 15px;
     background-image: url(../images/Hero-BG-2.png);
@@ -1057,5 +936,70 @@
     border: 1px solid;
     background: #faebd759;
   }
+
+    .hero_container {
+        height: 90vh;
+    }
+
+    .hero_container h1 {
+        font-size: 28px;
+        padding: 10px 14px;
+        line-height: 1.3;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    /* Flowers Page Style */
+  .flower_container{
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    margin: 15px;
+  }
+
+  .flower_card img{
+    width: 100%;
+  }
+
+  /* Footer */
+   .footer_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
+
+
+/* Footer Section */
+
+  .footer_container {
+    grid-template-columns: 1fr;
+  }
+
+  .social_icons {
+    justify-content: flex-start;
+  }
+
+  .nav-btn {
+    font-size: 2.2rem;
+  }
+
+
+
+
+
+/* ===== Responsive for flowerCard Zoom in===== */
+
+  .flower_card img {
+    cursor: zoom-in;
+  }
+@keyframes zoomIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
