@@ -1,7 +1,7 @@
 echo "# PlantoPedia-Website" >>
 git init
 git add .
-git commit -m "Correction"
+git commit -m ""
 git branch -M main
 git remote add origin https://github.com/Asmual/PlantoPedia-Website.git
 git push -u origin main

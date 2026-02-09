@@ -106,3 +106,36 @@ document.querySelectorAll(".readMore_button").forEach(btn => {
     window.location.href = `fish-details.html?id=${id}`;
   });
 });
+
+
+/* Read More Button JS  */
+ 
+const buttons = document.querySelectorAll(".readMore_button");
+const modal = document.getElementById("flowerModal");
+const overlay = document.getElementById("modalOverlay");
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+
+    document.getElementById("modalTitle").innerText =
+      button.dataset.title;
+
+    document.getElementById("modalImage").src =
+      button.dataset.img;
+
+    document.getElementById("modalDesc").innerHTML =
+      button.dataset.desc;
+
+    modal.style.display = "block";
+    overlay.style.display = "block";
+  });
+});
+
+document.querySelector(".closeBtn").addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
+
+function closeModal(){
+  modal.style.display = "none";
+  overlay.style.display = "none";
+}
+ 

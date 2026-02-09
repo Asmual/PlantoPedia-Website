@@ -1,42 +1,4 @@
-// document.addEventListener("DOMContentLoaded", () => {
 
-//   const images = document.querySelectorAll(".flower_card img");
-//   const previewBox = document.querySelector(".image-preview");
-//   const previewImg = previewBox?.querySelector("img");
-
-//   // Safety check
-//   if (!images.length || !previewBox || !previewImg) return;
-
-//   images.forEach(image => {
-//     image.addEventListener("click", () => {
-//       previewImg.src = image.src;
-//       previewBox.classList.add("active");
-//       previewBox.setAttribute("aria-hidden", "false");
-//     });
-//   });
-
-//   // click anywhere to close
-//   previewBox.addEventListener("click", () => {
-//     previewBox.classList.remove("active");
-//     previewBox.setAttribute("aria-hidden", "true");
-//     previewImg.src = "";
-//   });
-
-//   // ESC key support (pro touch 🔥)
-//   document.addEventListener("keydown", (e) => {
-//     if (e.key === "Escape") {
-//       previewBox.classList.remove("active");
-//       previewBox.setAttribute("aria-hidden", "true");
-//       previewImg.src = "";
-//     }
-//   });
-
-// });
-
-
-
-
-// 
 document.addEventListener("DOMContentLoaded", () => {
 
   const images = Array.from(document.querySelectorAll(".flower_card img"));

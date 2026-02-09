@@ -23,7 +23,7 @@ const fishData = {
       <h2>Tank Size</h2>
       <p>Minimum 20 liters</p>
       <h2>Temperature</h2>
-      <p>22–28°C</p>
+      <p>22–28°C </p>
       <h2>Diet</h2>
       <p>Flakes, pellets, live food</p>
     `
