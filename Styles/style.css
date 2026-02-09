@@ -120,12 +120,33 @@
 /* SubMenu  */
 .submenu{
   display: none;
+  position: absolute;
+  width: 190px;
+  top: 215%;
+  box-shadow: 0 5px 15px rgba(0,0,0,.1);
+  background-color: rgb(240, 248, 255);
+  text-align: center;
+  padding-bottom: 10px; 
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   
  
 }
-.submenu li{
-  padding: 6px 11px;
-  
+
+.submenu li {
+  padding: 12px 8px;
+  position: relative;
+  list-style: none;
+}
+
+.submenu li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+  height: 2px;
+  background-color: rgba(106, 161, 106, 0.4);
 }
 
 .submenu li a:hover {
@@ -137,14 +158,15 @@
   
 
 }
-/* .submenu::before{
+/* Plants Hover Problem Solve */
+.submenu::before{
   content: "";
   position: absolute;
   top: -24px;   
   left: 0;
   height: 24px;
   width: 90%;
-} */
+}
  
 
 
@@ -710,8 +732,7 @@
 
 
 
-/* Details Content *//* Details Content */
-
+/* Details Content for JS */
 
 .details-container {
   max-width: 900px;
@@ -816,7 +837,7 @@
       align-items: flex-start;
       position: fixed;
       height: 100vh;
-      width: 99%;
+      width: 100%;
       top: 70px;
       right: 0;
       border-top-left-radius: 20px;
@@ -845,6 +866,7 @@
     .nav_container li {
     width: 40%; 
     list-style: none;
+    position: relative;
 }
  .nav_container li a {
     display: block;
@@ -865,34 +887,36 @@
         
     }
 
-    /* Hamburger */
-    .navbar_toggle {
-        z-index: 1000;
-        position: relative;
-        display: block;
-        margin-left: 25px;
-    }
-
 
     /* SubMenu */
   .submenu{
     position: absolute;
-    top: 0%;
-    right: 128px;
+    top: 30%;
+    right: 100%;
     box-shadow: 0 5px 15px rgba(0,0,0,.1);
     text-align: center;
     background-color: rgba(240, 248, 255, 0.113);
     text-align: center;
     padding-bottom: 10px; 
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-radius: 15px;
+    position: absolute;
     
   }
   .submenu li a{
     background-color: rgb(3, 90, 3);
     width: 160px;
   }
+  .submenu li::after {
+    display: none; 
+  }
 
+  /* Hamburger */
+  .navbar_toggle {
+    z-index: 1000;
+    position: relative;
+    display: block;
+    margin-left: 25px;
+  }
 /* === Responsive Hero Section === */
 
 
