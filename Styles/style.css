@@ -156,8 +156,9 @@
 .dropdown:hover> .submenu {
   display: block;
   
-
 }
+
+
 /* Plants Hover Problem Solve */
 .submenu::before{
   content: "";
